@@ -36,7 +36,7 @@ async function loadPostsCollection() {
       useNewUrlParser: true,
     }
   );
-  return client.db("test_case").collection("testCases");
+  return client.db("groundup").collection("posts");
 }
 
 module.exports = router;
