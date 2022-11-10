@@ -3,6 +3,14 @@ const mongodb = require("mongodb");
 
 const router = express.Router();
 
+// Get one post
+// Get Posts
+router.get("/:title", async (req, res) => {
+  const posts = await loadPostsCollection();
+  console.log("posts", res);
+  res.send(await posts.find({}).toArray());
+});
+
 // Get Posts
 router.get("/", async (req, res) => {
   const posts = await loadPostsCollection();
@@ -15,6 +23,7 @@ router.post("/", async (req, res) => {
   const posts = await loadPostsCollection();
   await posts.insertOne({
     text: req.body.text,
+    title: req.body.title,
     createdAt: new Date(),
   });
   res.status(201).send();
