@@ -6,6 +6,7 @@ const router = express.Router();
 // Get Posts
 router.get("/", async (req, res) => {
   const posts = await loadPostsCollection();
+  console.log("posts", res);
   res.send(await posts.find({}).toArray());
 });
 
