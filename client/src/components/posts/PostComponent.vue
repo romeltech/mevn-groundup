@@ -29,7 +29,7 @@ export default {
             this.posts = response.data;
         },
         async getPosts() {
-            const response = await axios.get('http://mevn-groundup.melinfinity.com/api/posts');
+            const response = await axios.get('https://mevn-vue.melinfinity.com/api/posts');
             console.log("response", response);
             this.posts = response.data;
         }
