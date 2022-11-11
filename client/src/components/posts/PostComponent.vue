@@ -24,14 +24,22 @@ export default {
     },
     methods: {
         async getLocalPosts() {
-            const response = await axios.get('http://localhost:5000/api/posts');
-            console.log("response", response);
-            this.posts = response.data;
+            await axios.get('http://localhost:5000/api/posts', {
+                headers: { 'Content-Type': 'application/json' }
+            }).then((response) => {
+                this.posts = response.data
+            }).catch((error) => {
+                console.log(error);
+            });
         },
         async getPosts() {
-            const response = await axios.get('https://mevn-vue.melinfinity.com/api/posts');
-            console.log("response", response);
-            this.posts = response.data;
+            await axios.get("https://mevn-vue.melinfinity.com/api/posts", {
+                headers: { 'Content-Type': 'application/json' }
+            }).then((response) => {
+                this.posts = response.data
+            }).catch((error) => {
+                console.log(error);
+            });
         }
     },
     created() {
