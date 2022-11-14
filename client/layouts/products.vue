@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="m-container">
         <header>
             <Logo />
             <ul>
@@ -26,11 +26,3 @@
         </footer>
     </div>
 </template>
-  
-<style scoped>
-.container {
-    width: 100%;
-    max-width: 1366px;
-    margin: 0 auto;
-}
-</style>

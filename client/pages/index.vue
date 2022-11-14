@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="m-container">
     <h2>Home</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio at, impedit fuga soluta id labore fugit
       odio mollitia quae modi nostrum a illo quibusdam ipsam quam temporibus eos architecto?</p>
@@ -9,11 +9,3 @@
     </p>
   </div>
 </template>
-
-<style scoped>
-.container {
-  width: 100%;
-  max-width: 1366px;
-  margin: 0 auto;
-}
-</style>

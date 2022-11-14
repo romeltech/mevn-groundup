@@ -4,8 +4,9 @@
             <img :src="product.image" :alt="product.title" style="width: 100%; height: auto;">
         </div>
         <div class="card-title">{{ product.title }}</div>
-        <NuxtLink class="btn" :to="`/products/${product.id}`">
-            View Details</NuxtLink>
+        <v-btn color="primary" :to="`/products/${product.id}`">
+            View Details
+        </v-btn>
     </div>
 </template>
 
