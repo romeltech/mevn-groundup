@@ -1,22 +1,18 @@
 <template>
     <div class="container">
         <h2>All Products</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio at, impedit fuga soluta id labore
-            fugit
-            odio mollitia quae modi nostrum a illo quibusdam ipsam quam temporibus eos architecto?</p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus itaque ullam praesentium earum
-            laborum?
-            Exercitationem ad harum sequi, veritatis quis in quidem recusandae voluptatem voluptates non nostrum unde
-            natus.
-        </p>
+        <div class="products-wrapper">
+            <div v-for="p in products">
+                <ProductCard :product="p" />
+            </div>
+        </div>
     </div>
 </template>
 <script setup>
 definePageMeta({
     layout: 'products'
-
 })
+const { data: products } = await useFetch('https://fakestoreapi.com/products');
 </script>
 
 <style scoped>
@@ -24,5 +20,13 @@ definePageMeta({
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
+}
+
+.products-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
 }
 </style>

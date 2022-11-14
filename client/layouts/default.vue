@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <header>
-            <NuxtLink to="/">The Home</NuxtLink>
+            <Logo />
             <ul>
                 <li>
                     <NuxtLink to="/">Home</NuxtLink>
