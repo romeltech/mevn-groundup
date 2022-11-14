@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.0.96",
+    "joi": "^17.7.0",
     "mongoose": "^6.7.2",
     "sass": "^1.56.1",
     "vuetify": "^3.0.1"

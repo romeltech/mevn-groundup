@@ -6,7 +6,7 @@ export default async () => {
 
   // connect to mongodb
   mongoose
-    .connect(config.MONGO_URL)
+    .connect(config.MONGO_URI)
     .then(() => console.log(`Conntected to DB`))
     .catch((e) => console.log(e));
 };
