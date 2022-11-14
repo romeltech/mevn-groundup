@@ -15,10 +15,8 @@
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
-        <v-main>
-            <v-container class="py-8 px-6" fluid>
-                <slot />
-            </v-container>
+        <v-main>  
+            <slot />
         </v-main>
     </v-app>
 </template>
@@ -45,8 +43,8 @@ export default {
                 icon: "mdi-home"
             },
             {
-                location: "/settings",
-                text: "Settings",
+                location: "/admin/posts",
+                text: "Posts",
                 icon: "mdi-pencil"
             }
         ],
